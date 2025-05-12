@@ -1,0 +1,1 @@
+This folder contains the model's output results. Specifically, it holds the predicted values alongside the corresponding true values for the materials within the test dataset.
