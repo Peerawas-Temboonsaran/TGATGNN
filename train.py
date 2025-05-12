@@ -228,9 +228,9 @@ for epoch in range(num_epochs):
         avg_non_neighbor_sim[layer_idx] = total_similarity[1] / num_val_batches
         avg_all_pair_sim[layer_idx] = total_similarity[2] / num_val_batches
 
-        print(f"[E{epoch} L{layer_idx}] Neighbor: {avg_neighbor_sim[layer_idx]:.4f} | "
-              f"Non-neigh: {avg_non_neighbor_sim[layer_idx]:.4f} | "
-              f"All-pair: {avg_all_pair_sim[layer_idx]:.4f}")
+        # print(f"[E{epoch} L{layer_idx}] Neighbor: {avg_neighbor_sim[layer_idx]:.4f} | "
+        #       f"Non-neigh: {avg_non_neighbor_sim[layer_idx]:.4f} | "
+        #       f"All-pair: {avg_all_pair_sim[layer_idx]:.4f}")
 
     # Store the calculated similarities for the current epoch
     all_epoch_similarities[f'Epoch_{epoch}_Neighbor'] = avg_neighbor_sim
