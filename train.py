@@ -11,6 +11,7 @@ import torch.optim as optim
 from torch.optim import lr_scheduler
 import torch
 import torch.nn.functional as F
+import openpyxl
 
 # MOST CRUCIAL DATA PARAMETERS
 parser = argparse.ArgumentParser(description='GATGNN')
@@ -26,7 +27,7 @@ parser.add_argument('--data_src', default='CGCNN',choices=['CGCNN','MEGNET','NEW
 parser.add_argument('--model_name', default='TGATGNN-1',
                     choices=['TGATGNN-1', 'TGATGNN-2', 'TGATGNN-3', 'TGATGNN-4'],
                     help='Choose which TGATGNN model variant to use (default: TGATGNN-1)')
-parser.add_argument('--num_layers',default=5, type=int, 
+parser.add_argument('--num_layers',default=3, type=int, 
                     help='number of AGAT layers to use in model (default:3)')
 parser.add_argument('--num_neurons',default=64, type=int,
                     help='number of neurons to use per AGAT Layer(default:64)')
